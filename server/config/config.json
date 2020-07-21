@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": 1234,
+    "database": "E-commerce_development",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": 1234,
+    "database": "E-commerce_test",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "E-commerce_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
