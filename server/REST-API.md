@@ -567,7 +567,6 @@
         ]
         }
     }
-
     ```
  
 * **Error Response:**
