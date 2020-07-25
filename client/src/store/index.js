@@ -23,7 +23,7 @@ export default new Vuex.Store({
       state.categories = payload
     },
     newProduct (state, payload) {
-      console.log(payload)
+      // console.log(payload)
       state.products.push(payload.data)
     },
     deletedProduct (state, productId) {

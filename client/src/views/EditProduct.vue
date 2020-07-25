@@ -13,11 +13,11 @@
                 <div class="d-flex my-2 justify-content-center">
                     <div class="form-group mx-5">
                         <label><h4>Price</h4></label>
-                        <input type="text" class="form-control" v-model="price" />
+                        <input type="number" class="form-control" v-model="price" />
                     </div>
                     <div class="form-group mx-5">
                         <label><h4>Stock</h4></label>
-                        <input type="text" class="form-control" v-model="stock" />
+                        <input type="number" class="form-control" v-model="stock" />
                     </div>
                 </div>
                 <div class="input-group w-50 mx-auto">
