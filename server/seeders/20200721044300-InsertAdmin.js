@@ -13,6 +13,14 @@ module.exports = {
       role: "admin",
       createdAt: new Date (),
       updatedAt: new Date (),
+      },
+      {
+      name: "User",
+      email: "user@tokosebelah.com",
+      password: newPassword,
+      role: "user",
+      createdAt: new Date (),
+      updatedAt: new Date (),
       }
     ]
 

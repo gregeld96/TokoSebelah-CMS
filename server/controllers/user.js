@@ -18,7 +18,7 @@ class UserController {
                 }
             })
             .then(user => {
-                if(!user) throw ({status: 400, msg: `Email or Password Invalid`})
+                if(!user || user.role !== 'admin') throw ({status: 400, msg: `Email or Password Invalid`})
 
                 let result = comparePassword(password, user.password)
                 if(result){

@@ -13,7 +13,7 @@ class ProductController {
         if(newProduct.stock < 1){
             next({
                 status: 400,
-                msg: "Must more than 0"
+                msg: "Stock must more than 0"
             })
         }
         Product.create(newProduct)

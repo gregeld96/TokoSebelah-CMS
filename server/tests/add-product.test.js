@@ -33,7 +33,8 @@ describe('Add Product to the List', () => {
             price: "5000000", 
             stock: "25",
             categoryId: 1, 
-            image_url: "https://asset.kompas.com/crops/VUGKN7mQL1-GXZugeEdKwqn_gMY=/57x0:732x450/750x500/data/photo/2019/05/17/1624224850.png"
+            image_url: "https://asset.kompas.com/crops/VUGKN7mQL1-GXZugeEdKwqn_gMY=/57x0:732x450/750x500/data/photo/2019/05/17/1624224850.png",
+            categoryId: 1
         }
 
         request(app)
@@ -55,7 +56,8 @@ describe('Add Product to the List', () => {
             price: "", 
             stock: "25",
             categoryId: 1, 
-            image_url: "https://asset.kompas.com/crops/VUGKN7mQL1-GXZugeEdKwqn_gMY=/57x0:732x450/750x500/data/photo/2019/05/17/1624224850.png"
+            image_url: "https://asset.kompas.com/crops/VUGKN7mQL1-GXZugeEdKwqn_gMY=/57x0:732x450/750x500/data/photo/2019/05/17/1624224850.png",
+            categoryId: 1
         }
 
         request(app)
@@ -77,7 +79,8 @@ describe('Add Product to the List', () => {
             price: "1234aw", 
             stock: "25",
             categoryId: 1, 
-            image_url: "https://asset.kompas.com/crops/VUGKN7mQL1-GXZugeEdKwqn_gMY=/57x0:732x450/750x500/data/photo/2019/05/17/1624224850.png"
+            image_url: "https://asset.kompas.com/crops/VUGKN7mQL1-GXZugeEdKwqn_gMY=/57x0:732x450/750x500/data/photo/2019/05/17/1624224850.png",
+            categoryId: 1
         }
 
         request(app)
@@ -99,7 +102,8 @@ describe('Add Product to the List', () => {
             price: 1234.56, 
             stock: "25",
             categoryId: 1, 
-            image_url: "https://asset.kompas.com/crops/VUGKN7mQL1-GXZugeEdKwqn_gMY=/57x0:732x450/750x500/data/photo/2019/05/17/1624224850.png"
+            image_url: "https://asset.kompas.com/crops/VUGKN7mQL1-GXZugeEdKwqn_gMY=/57x0:732x450/750x500/data/photo/2019/05/17/1624224850.png",
+            categoryId: 1
         }
 
         request(app)
@@ -121,7 +125,8 @@ describe('Add Product to the List', () => {
             price: -1234.6, 
             stock: "25",
             categoryId: 1, 
-            image_url: "https://asset.kompas.com/crops/VUGKN7mQL1-GXZugeEdKwqn_gMY=/57x0:732x450/750x500/data/photo/2019/05/17/1624224850.png"
+            image_url: "https://asset.kompas.com/crops/VUGKN7mQL1-GXZugeEdKwqn_gMY=/57x0:732x450/750x500/data/photo/2019/05/17/1624224850.png",
+            categoryId: 1
         }
 
         request(app)
@@ -143,7 +148,8 @@ describe('Add Product to the List', () => {
             price: 250000, 
             stock: "",
             categoryId: 1, 
-            image_url: "https://asset.kompas.com/crops/VUGKN7mQL1-GXZugeEdKwqn_gMY=/57x0:732x450/750x500/data/photo/2019/05/17/1624224850.png"
+            image_url: "https://asset.kompas.com/crops/VUGKN7mQL1-GXZugeEdKwqn_gMY=/57x0:732x450/750x500/data/photo/2019/05/17/1624224850.png",
+            categoryId: 1
         }
 
         request(app)
@@ -153,7 +159,7 @@ describe('Add Product to the List', () => {
             .expect('Content-Type', /json/)
             .expect(400)
             .then(response => {
-                expect(response.body).toBe(`Must more than 0`)
+                expect(response.body).toBe(`Stock must more than 0`)
                 done()
             })
             .catch(done)
@@ -165,7 +171,8 @@ describe('Add Product to the List', () => {
             price: 250000, 
             stock: "a3",
             categoryId: 1, 
-            image_url: "https://asset.kompas.com/crops/VUGKN7mQL1-GXZugeEdKwqn_gMY=/57x0:732x450/750x500/data/photo/2019/05/17/1624224850.png"
+            image_url: "https://asset.kompas.com/crops/VUGKN7mQL1-GXZugeEdKwqn_gMY=/57x0:732x450/750x500/data/photo/2019/05/17/1624224850.png",
+            categoryId: 1
         }
 
         request(app)
@@ -187,7 +194,8 @@ describe('Add Product to the List', () => {
             price: 123456, 
             stock: 2.5,
             categoryId: 1, 
-            image_url: "https://asset.kompas.com/crops/VUGKN7mQL1-GXZugeEdKwqn_gMY=/57x0:732x450/750x500/data/photo/2019/05/17/1624224850.png"
+            image_url: "https://asset.kompas.com/crops/VUGKN7mQL1-GXZugeEdKwqn_gMY=/57x0:732x450/750x500/data/photo/2019/05/17/1624224850.png",
+            categoryId: 1
         }
 
         request(app)
@@ -209,7 +217,8 @@ describe('Add Product to the List', () => {
             price: 250000, 
             stock: -1234.6,
             categoryId: 1, 
-            image_url: "https://asset.kompas.com/crops/VUGKN7mQL1-GXZugeEdKwqn_gMY=/57x0:732x450/750x500/data/photo/2019/05/17/1624224850.png"
+            image_url: "https://asset.kompas.com/crops/VUGKN7mQL1-GXZugeEdKwqn_gMY=/57x0:732x450/750x500/data/photo/2019/05/17/1624224850.png",
+            categoryId: 1
         }
 
         request(app)
@@ -219,7 +228,7 @@ describe('Add Product to the List', () => {
             .expect('Content-Type', /json/)
             .expect(400)
             .then(response => {
-                expect(response.body).toBe(`Must more than 0`)
+                expect(response.body).toBe(`Stock must more than 0`)
                 done()
             })
             .catch(done)
@@ -231,7 +240,8 @@ describe('Add Product to the List', () => {
             price: "5000000", 
             stock: "25",
             categoryId: 1, 
-            image_url: ""
+            image_url: "",
+            categoryId: 1
         }
 
         request(app)
@@ -253,7 +263,8 @@ describe('Add Product to the List', () => {
             price: "5000000", 
             stock: "25",
             categoryId: 1, 
-            image_url: "gogogo"
+            image_url: "gogogo",
+            categoryId: 1
         }
 
         request(app)
@@ -264,6 +275,29 @@ describe('Add Product to the List', () => {
             .expect(400)
             .then(response => {
                 expect(response.body).toBe(`Image must be url`)
+                done()
+            })
+            .catch(done)
+    })
+
+    test('Add Product Failed, No Category', (done) => {
+        const newProduct = { 
+            name: "Hp Asus Zenfone 6", 
+            price: "5000000", 
+            stock: "25",
+            categoryId: 1, 
+            image_url: "https://asset.kompas.com/crops/VUGKN7mQL1-GXZugeEdKwqn_gMY=/57x0:732x450/750x500/data/photo/2019/05/17/1624224850.png",
+            categoryId: ""
+        }
+
+        request(app)
+            .post('/products/add')
+            .set("access_token", AdminToken)
+            .send(newProduct)
+            .expect('Content-Type', /json/)
+            .expect(400)
+            .then(response => {
+                expect(response.body).toBe(`Category cannot be empty`)
                 done()
             })
             .catch(done)

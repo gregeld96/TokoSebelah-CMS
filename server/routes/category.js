@@ -8,5 +8,6 @@ route.get('/', controller.read);
 route.get('/:name', controller.filter);
 route.use(authorization)
 route.post('/add', controller.add);
+route.delete('/:id', controller.delete)
 
 module.exports = route;

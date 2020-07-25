@@ -41,7 +41,24 @@ class CategoryController {
 
         Category.create(newCategory)
                 .then(data => {
-                    res.status(201).json({ msg: "Category created!"})
+                    res.status(201).json({data, msg: "Category created!"})
+                })
+                .catch(err => {
+                    next(err)
+                })
+    }
+
+    static delete (req, res, next){
+        Category.findByPk(req.params.id)
+                .then(data => {
+                    if (!data){
+                        throw ({status: 404, msg:'Data not found'})
+                    } else {
+                        return Category.destroy({where: {id: req.params.id}})
+                    }
+                })
+                .then(data => {
+                    res.status(200).json('Category deleted!')
                 })
                 .catch(err => {
                     next(err)

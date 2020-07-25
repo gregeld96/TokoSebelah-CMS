@@ -324,6 +324,30 @@ describe('Edit Product to the List', () => {
             .catch(done)
     })
 
+    test('Edit Product Failed, No Category', (done) => {
+        const id = 1
+
+        const updatedProduct = { 
+            name: "Laptop Lenovo", 
+            price: 7000000, 
+            stock: 2, 
+            image_url: "https://asset.kompas.com/crops/VUGKN7mQL1-GXZugeEdKwqn_gMY=/57x0:732x450/750x500/data/photo/2019/05/17/1624224850.png",
+            categoryId: ''
+        }
+
+        request(app)
+            .put(`/products/${id}`)
+            .set("access_token", AdminToken)
+            .send(updatedProduct)
+            .expect('Content-Type', /json/)
+            .expect(400)
+            .then(response => {
+                expect(response.body).toBe(`Category cannot be empty`)
+                done()
+            })
+            .catch(done)
+    })
+
     test('Edit Product Failed, Not the right role ', (done) => {
         const id = 11
     

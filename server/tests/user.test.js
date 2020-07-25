@@ -124,7 +124,7 @@ describe('Test Login Admin', () => {
 })
 
 describe('Test Login User', () => {
-    test('Login User Successful', (done) => {
+    test('Login User Failed', (done) => {
         const dummyAccount = {email: "user@tokosebelah.com", password: "admin"}
 
         request(app)
@@ -132,10 +132,9 @@ describe('Test Login User', () => {
             .send(dummyAccount)
             .set('Accept', 'application/json')
             .expect('Content-Type', /json/)
-            .expect(200)
+            .expect(400)
             .then (response => {
-                console.log(response.body.access_token, '==== Token')
-                expect(response.body.msg).toBe('Successfully logged in!')
+                expect(response.body.msg).toBe('Email or Password Invalid')
                 done()
             }).catch(done)
     })

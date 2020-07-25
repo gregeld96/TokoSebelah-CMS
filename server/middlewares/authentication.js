@@ -13,11 +13,12 @@ async function Authentication(req, res, next){
             }
         })
 
-        if(!user) throw ({status: 401, msg: `Authentification Failed`})
-        else {
+        if(user.role === 'admin') {
             req.userData = decoded;
             next()
         }
+        else throw ({status: 401, msg: `Authentification Failed`})
+
     } catch (err) {
         next(err)
     }

@@ -72,7 +72,14 @@ module.exports = (sequelize, DataTypes) => {
         }
       }
     },
-    categoryId: DataTypes.INTEGER
+  categoryId: {
+    type: DataTypes.INTEGER,
+    validate: {
+      notEmpty: {
+        msg: `Category cannot be empty`
+      }
+    }
+  }
   }, {
     sequelize,
     modelName: 'Product',
