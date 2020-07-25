@@ -1,6 +1,6 @@
 import axios from 'axios'
 const instace = axios.create({
-  baseURL: 'http://localhost:3000'
+  baseURL: 'https://cms-ecom-greg.herokuapp.com/'
 })
 
 export default instace
