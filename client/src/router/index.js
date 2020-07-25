@@ -10,6 +10,7 @@ import Category from '../views/CategoryPage.vue'
 import CategoryTable from '../components/CategoryTable.vue'
 import AddCategory from '../views/AddCategory.vue'
 import DetailCategory from '../views/DetailCategoryPage.vue'
+import NotFound from '../views/NotFound.vue'
 
 Vue.use(VueRouter)
 
@@ -79,6 +80,10 @@ const routes = [
         ]
       }
     ]
+  },
+  {
+    path: '*',
+    component: NotFound
   }
 ]
 
