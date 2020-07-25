@@ -35,20 +35,6 @@ class ProductController {
                 })
     }
 
-    static filter (req, res, next){
-        Product.findByPk(req.params.id)
-                .then(data => {
-                    if (!data){
-                        throw ({status: 404, msg:'Data not found'})
-                    } else {
-                        res.status(200).json({data})
-                    }
-                })
-                .catch(err => {
-                    next(err)
-                })
-    }
-
     static delete (req, res, next){
         Product.findByPk(req.params.id)
                 .then(data => {

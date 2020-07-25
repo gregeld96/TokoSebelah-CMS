@@ -32,36 +32,8 @@ describe('Fetch data from database', () => {
           done()
         }).catch(done)
     })
-
-    test('Get specific product', (done) => {
-        const id = 1
-
-        request(app)
-            .get(`/products/${id}`)
-            .set("access_token", AdminToken)
-            .expect('Content-Type', /json/)
-            .expect(200)
-            .then(response => {
-              expect(response.body.data).toHaveProperty('name', 'Hp Asus Zenfone 6')
-              done()
-            }).catch(done)
-    })
-
-    test('Get specific product failed, Product not found', (done) => {
-        const id = 6
-
-        request(app)
-            .get(`/products/${id}`)
-            .set("access_token", AdminToken)
-            .expect('Content-Type', /json/)
-            .expect(404)
-            .then(response => {
-              expect(response.body).toBe("Data not found")
-              done()
-            }).catch(done)
-    })
-
-    test('Get specific product failed, No Access Token', (done) => {
+    
+    test('Get all list, No Access Token', (done) => {
       const id = 6
 
       request(app)
@@ -74,7 +46,7 @@ describe('Fetch data from database', () => {
           }).catch(done)
     })
 
-    test('Get specific product failed, Using unknown Token ', (done) => {
+    test('Get all list, Using unknown Token ', (done) => {
       const id = 6
 
       request(app)
